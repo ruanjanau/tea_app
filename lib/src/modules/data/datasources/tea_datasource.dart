@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:tea_app/src/modules/data/models/models.dart';
-import 'package:tea_app/src/modules/dio/dio_mockapi.dart';
+import '../../dio/dio.dart';
+import '../models/models.dart';
 
 abstract class ITeaDatasource {
   FutureOr<List<TeaModel>> getTea();
@@ -14,7 +14,7 @@ class TeaDatasource implements ITeaDatasource {
 
   @override
   FutureOr<List<TeaModel>> getTea() async {
-    final response = await dioMockApi.dioClient.get(dioMockApi.baseUrl);
+    final response = await dioMockApi.dioClient.get('${dioMockApi.baseUrl}tea');
 
     return (response.data as List).map((e) => TeaModel.fromJson(e)).toList();
   }
