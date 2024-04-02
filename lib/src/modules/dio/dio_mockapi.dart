@@ -23,7 +23,7 @@ class DioMockApi {
       onResponse: (Response response, ResponseInterceptorHandler handler) {
         return handler.next(response);
       },
-      onError: (DioError error, ErrorInterceptorHandler handler) {
+      onError: (DioException error, ErrorInterceptorHandler handler) {
         return handler.next(error);
       },
     );
