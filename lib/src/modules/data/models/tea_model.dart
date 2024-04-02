@@ -1,4 +1,4 @@
-import 'package:tea_app/src/modules/domain/entities/entities.dart';
+import '../../domain/entities/entities.dart';
 
 class TeaModel {
   final int? id;
