@@ -10,6 +10,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
+      routes: const {},
     );
   }
 }
