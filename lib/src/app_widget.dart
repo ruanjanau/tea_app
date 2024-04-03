@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tea_app/src/modules/presentation/views/tea_list/tea_list_page.dart';
+
+import 'modules/presentation/views/home/home.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -10,7 +13,10 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      routes: const {},
+      routes: {
+        '/': (context) => const HomePage(),
+        '/tea-page/': (context) => const TeaListPage(),
+      },
     );
   }
 }
