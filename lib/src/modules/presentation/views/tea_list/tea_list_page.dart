@@ -9,11 +9,21 @@ class TeaListPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Tea'),
       ),
-      body: const Center(
-        child: CircleAvatar(
-          radius: 50,
-          child: Text('P'),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Center(
+            child: CircleAvatar(
+              radius: 50,
+              child: Text('P'),
+            ),
+          ),
+          Center(
+            child: ElevatedButton(
+                onPressed: () {},
+                child: const Text('Clica aí de novo, fresco!!!')),
+          )
+        ],
       ),
     );
   }

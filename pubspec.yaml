@@ -17,9 +17,12 @@ dependencies:
   bloc: ^8.1.4
   flutter_bloc: ^8.1.5  
   freezed_annotation: ^2.4.1
+  flutter_modular: ^6.3.2
+  page_transition: ^2.1.0
 
 
   cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -30,6 +33,9 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+
+  assets:
+   - assets/svg/
 
   uses-material-design: true
 
