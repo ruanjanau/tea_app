@@ -1,5 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:tea_app/src/modules/presentation/views/home/home.dart';
+
+import 'home.dart';
 
 class HomeModule extends Module {
   @override

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:tea_app/src/modules/widgets/widgets.dart';
+
+import '../../../widgets/widgets.dart';
 
 class FirstOnboarding extends StatelessWidget {
   const FirstOnboarding({super.key});

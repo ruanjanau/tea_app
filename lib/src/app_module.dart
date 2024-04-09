@@ -1,8 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:tea_app/src/modules/presentation/views/login/login.dart';
-import 'package:tea_app/src/modules/presentation/views/onboarding/onboarding.dart';
-import 'package:tea_app/src/modules/presentation/views/splash/splash.dart';
-import 'package:tea_app/src/modules/presentation/views/tea_list/tea_list.dart';
+import 'modules/presentation/views/login/login.dart';
+import 'modules/presentation/views/onboarding/onboarding.dart';
+import 'modules/presentation/views/splash/splash.dart';
+import 'modules/presentation/views/tea_list/tea_list.dart';
 
 import 'modules/presentation/views/home/home.dart';
 

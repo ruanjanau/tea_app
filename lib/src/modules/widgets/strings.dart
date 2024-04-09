@@ -8,4 +8,10 @@ class Strings {
       'Explore e Desfrute do \n      Melhor do Chá!';
   static const String infoOnboard2 =
       '        Descubra uma variedade de \n     receitas de chá com facilidade. \n    Tudo o que você precisa, em um \nsó lugar. Vamos começar a explorar!';
+
+  static const String titleApp = 'CháZen';
+
+  static const String forgotPassword = 'Esqueceu sua senha?';
+
+  static const String privacyPolici = 'Política de privacidade.';
 }
