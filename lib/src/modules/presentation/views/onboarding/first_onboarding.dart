@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tea_app/src/modules/widgets/widgets.dart';
 
 class FirstOnboarding extends StatelessWidget {
   const FirstOnboarding({super.key});
@@ -14,32 +15,30 @@ class FirstOnboarding extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              Strings.titleOnboard1,
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w900,
+                fontSize: 22.0,
+              ),
+            ),
+            const SizedBox(height: 20.0),
             Center(
               child: SvgPicture.asset(
                 'assets/svg/onbo1.svg',
               ),
             ),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 30.0),
             const Text(
-              'Bem-Vindo(a) ao Nosso App de Chá!',
+              Strings.infoOnboard1,
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
-                fontSize: 20.0,
+                fontSize: 18.0,
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Prepare-se para uma jornada simplificada \nno mundo do chá. Vamos encontrar seu chá favorito!',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 16.0,
-                ),
-              ),
-            ),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 40.0),
             ElevatedButton(
               onPressed: () {
                 Modular.to.navigate('/second-onboarding');
