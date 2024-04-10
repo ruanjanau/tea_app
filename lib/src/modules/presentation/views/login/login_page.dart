@@ -1,8 +1,9 @@
-import 'package:ChazEN/src/modules/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'controller/login_cotroller.dart';
+
+import '../../../widgets/custom_button.dart';
 import '../../../widgets/custom_title_app.dart';
 import '../../../widgets/widgets.dart';
+import 'controller/login_cotroller.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

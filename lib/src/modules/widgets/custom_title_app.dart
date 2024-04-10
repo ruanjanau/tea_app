@@ -1,6 +1,6 @@
+import 'widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ChazEN/src/modules/widgets/widgets.dart';
 
 class CustomTitleApp extends StatelessWidget {
   const CustomTitleApp({super.key});

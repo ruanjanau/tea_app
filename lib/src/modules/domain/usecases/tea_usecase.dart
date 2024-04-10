@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 
 import '../entities/entities.dart';
 import '../errors/errors.dart';
-import '../respositories/repositories.dart';
+import '../repositories/repositories.dart';
 
 abstract class ITeaUsecase {
   Future<Either<TeaErrors, List<TeaEntity>>> call();
