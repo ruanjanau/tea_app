@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class TeaSplash extends StatefulWidget {
   const TeaSplash({super.key});
@@ -9,16 +9,9 @@ class TeaSplash extends StatefulWidget {
 }
 
 class _TeaSplashState extends State<TeaSplash> {
-  var width = 0.0;
-  var heigth = 0.0;
-
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      setState(() {
-        width = 250.0;
-        heigth = 250.0;
-      });
       final nav = Navigator.of(context);
       await Future.delayed(
         const Duration(seconds: 4),
@@ -33,17 +26,31 @@ class _TeaSplashState extends State<TeaSplash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[300],
-      body: Center(
-        child: AnimatedContainer(
-          duration: const Duration(seconds: 3),
-          width: width,
-          height: heigth,
-          child: Hero(
-            tag: 'splash',
-            child: SvgPicture.asset('assets/svg/plant.svg'),
+      backgroundColor: Colors.green[200],
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'ChaZen',
+            style: TextStyle(
+                color: Color(0xFF249A37),
+                fontSize: 46.0,
+                fontWeight: FontWeight.w900,
+                shadows: [
+                  Shadow(
+                    color: Colors.black,
+                    blurRadius: 6.0,
+                    offset: Offset(3.0, 3.5),
+                  )
+                ]),
           ),
-        ),
+          const SizedBox(height: 80.0),
+          LoadingAnimationWidget.hexagonDots(
+            color: Colors.white,
+            size: 50.0,
+          ),
+        ],
       ),
     );
   }
