@@ -1,4 +1,4 @@
-name: ChazEN
+name: chazen
 description: "A new Flutter project."
 
 
@@ -17,13 +17,14 @@ dependencies:
   bloc: ^8.1.4
   flutter_bloc: ^8.1.5  
   freezed_annotation: ^2.4.1
-  flutter_modular: ^6.3.2
+  flutter_modular: ^5.0.3
   page_transition: ^2.1.0
 
 
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.10+1
   loading_animation_widget: ^1.2.1
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:

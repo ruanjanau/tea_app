@@ -20,7 +20,9 @@ class _TeaSplashState extends State<TeaSplash> {
         heigth = 250.0;
       });
       final nav = Navigator.of(context);
-      await Future.delayed(const Duration(seconds: 4));
+      await Future.delayed(
+        const Duration(seconds: 4),
+      );
       nav.pushNamed(
         '/first-onboarding',
       );
