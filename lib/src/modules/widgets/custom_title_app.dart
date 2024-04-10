@@ -25,7 +25,10 @@ class CustomTitleApp extends StatelessWidget {
               Shadow(
                 color: Colors.black,
                 blurRadius: 3.0,
-                offset: Offset(3.0, 3.5),
+                offset: Offset(
+                  3.0,
+                  3.5,
+                ),
               )
             ],
           ),
