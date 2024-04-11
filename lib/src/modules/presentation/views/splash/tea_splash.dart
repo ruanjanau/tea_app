@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class TeaSplash extends StatefulWidget {
@@ -31,19 +32,11 @@ class _TeaSplashState extends State<TeaSplash> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'ChaZen',
-            style: TextStyle(
-                color: Color(0xFF249A37),
-                fontSize: 46.0,
-                fontWeight: FontWeight.w900,
-                shadows: [
-                  Shadow(
-                    color: Colors.black,
-                    blurRadius: 6.0,
-                    offset: Offset(3.0, 3.5),
-                  )
-                ]),
+          Center(
+            child: SvgPicture.asset(
+              'assets/svg/titileapp.svg',
+              height: 80.0,
+            ),
           ),
           const SizedBox(height: 80.0),
           LoadingAnimationWidget.hexagonDots(
