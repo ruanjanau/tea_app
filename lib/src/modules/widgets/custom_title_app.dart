@@ -11,8 +11,8 @@ class CustomTitleApp extends StatelessWidget {
       children: [
         Center(
           child: SvgPicture.asset(
-            'assets/svg/shazen.svg',
-            height: 160.0,
+            'assets/svg/logo.svg',
+            height: 200.0,
           ),
         ),
         const Text(
