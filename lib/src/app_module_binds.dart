@@ -1,8 +1,9 @@
+import 'package:flutter_modular/flutter_modular.dart';
+
 import 'modules/data/datasources/tea_datasource.dart';
 import 'modules/data/repositories/repositories.dart';
 import 'modules/domain/repositories/repositories.dart';
 import 'modules/domain/usecases/usecases.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 class AppModuleBinds {
   static List<Bind> get binds => [

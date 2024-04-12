@@ -1,4 +1,3 @@
-import 'widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -8,6 +7,8 @@ class CustomTitleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
           child: SvgPicture.asset(
@@ -15,22 +16,10 @@ class CustomTitleApp extends StatelessWidget {
             height: 200.0,
           ),
         ),
-        const Text(
-          Strings.titleApp,
-          style: TextStyle(
-            fontSize: 34.0,
-            color: Colors.white,
-            fontWeight: FontWeight.w900,
-            shadows: [
-              Shadow(
-                color: Colors.black,
-                blurRadius: 3.0,
-                offset: Offset(
-                  3.0,
-                  3.5,
-                ),
-              )
-            ],
+        Center(
+          child: SvgPicture.asset(
+            'assets/svg/titileapp.svg',
+            height: 80.0,
           ),
         ),
       ],
