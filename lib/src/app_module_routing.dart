@@ -1,13 +1,9 @@
-import 'modules/presentation/views/login/login.dart';
-import 'modules/presentation/views/onboarding/onboarding.dart';
-import 'modules/presentation/views/tea_list/tea_list_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'modules/presentation/navigation/navigation.dart';
 import 'modules/presentation/views/home/home.dart';
 import 'modules/presentation/views/login/login.dart';
-import 'modules/presentation/views/onboarding/first_onboarding.dart';
-import 'modules/presentation/views/onboarding/second_onboarding.dart';
+import 'modules/presentation/views/onboarding/onboarding.dart';
 import 'modules/presentation/views/splash/splash.dart';
 import 'modules/presentation/views/tea_list/tea_list_page.dart';
 

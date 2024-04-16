@@ -1,5 +1,5 @@
-class CustomAssets {
-  static String get titleApp => 'assets/svg/shazen.svg';
+class CoreAssets {
+  static String get titleApp => 'assets/svg/titileapp.svg';
 
   static String get splash => 'assets/svg/plant.svg';
 

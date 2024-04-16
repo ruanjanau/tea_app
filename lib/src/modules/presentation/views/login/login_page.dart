@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
+import '../../../../core/strings/strings.dart';
 import '../../../widgets/widgets.dart';
 import 'controller/login_cotroller.dart';
 
@@ -43,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                   const Padding(
                     padding: EdgeInsets.only(left: 120.0),
                     child: Text(
-                      Strings.forgotPassword,
+                      CoreStrings.forgotPassword,
                       style: TextStyle(
                         color: Color.fromARGB(255, 59, 58, 58),
                         fontSize: 16.0,
@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: Color.fromARGB(255, 59, 58, 58),
                         ),
                         Text(
-                          Strings.privacyPolici,
+                          CoreStrings.privacyPolici,
                           style: TextStyle(
                             color: Color.fromARGB(255, 59, 58, 58),
                             fontSize: 16.0,

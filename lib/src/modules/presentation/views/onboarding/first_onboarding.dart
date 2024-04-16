@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../widgets/widgets.dart';
+import '../../../../core/assets/assets.dart';
+import '../../../../core/strings/strings.dart';
 
 class FirstOnboarding extends StatelessWidget {
   const FirstOnboarding({super.key});
@@ -17,7 +18,7 @@ class FirstOnboarding extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              Strings.titleOnboard1,
+              CoreStrings.titleOnboard1,
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
@@ -27,12 +28,12 @@ class FirstOnboarding extends StatelessWidget {
             const SizedBox(height: 20.0),
             Center(
               child: SvgPicture.asset(
-                'assets/svg/onbo1.svg',
+                CoreAssets.onbo1,
               ),
             ),
             const SizedBox(height: 30.0),
             const Text(
-              Strings.infoOnboard1,
+              CoreStrings.infoOnboard1,
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,

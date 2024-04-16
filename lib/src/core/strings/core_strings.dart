@@ -1,4 +1,4 @@
-class Strings {
+class CoreStrings {
   static const String titleOnboard1 = 'Bem-Vindo(a) ao CházEN';
 
   static const String infoOnboard1 =
