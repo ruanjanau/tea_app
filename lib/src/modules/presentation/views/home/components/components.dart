@@ -1,1 +1,1 @@
-export 'custom_avatar.dart';
+export 'carousel_component.dart';

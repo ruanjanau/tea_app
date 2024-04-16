@@ -1,4 +1,7 @@
-import 'components/custom_avatar.dart';
+import 'package:chazen/src/core/icons/core_icons.dart';
+import 'package:chazen/src/modules/widgets/custom_card_product.dart';
+
+import 'components/carousel_component.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,32 +19,74 @@ class HomePage extends StatelessWidget {
             fontWeight: FontWeight.w900,
           ),
         ),
-        backgroundColor: Colors.green[300],
+        backgroundColor: const Color(0xFF419F7D),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 20.0,
+          vertical: 10.0,
+        ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Destaques',
-              style: TextStyle(
-                color: Colors.green[400],
-                fontSize: 22.0,
-                fontWeight: FontWeight.w700,
-              ),
+            Row(
+              children: [
+                Icon(
+                  CoreIcons.star,
+                  color: Colors.green[400],
+                  size: 30,
+                ),
+                const SizedBox(width: 6.0),
+                Text(
+                  'Destaques',
+                  style: TextStyle(
+                    color: Colors.green[400],
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 30.0),
-            const CustomAvatar(),
+            const CarouselComponent(),
             const SizedBox(height: 40.0),
-            Text(
-              'Pra você',
-              style: TextStyle(
-                color: Colors.green[400],
-                fontSize: 22.0,
-                fontWeight: FontWeight.w700,
-              ),
+            Row(
+              children: [
+                Icon(
+                  CoreIcons.forYou,
+                  color: Colors.green[400],
+                  size: 30,
+                ),
+                const SizedBox(width: 6.0),
+                Text(
+                  'Pra você',
+                  style: TextStyle(
+                    color: Colors.green[400],
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
             ),
+            const SizedBox(height: 30.0),
+            const CustomCardProduct(),
+            const SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Ver mais',
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
