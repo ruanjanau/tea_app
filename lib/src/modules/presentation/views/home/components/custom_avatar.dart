@@ -1,24 +1,32 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class CustomAvatar extends StatelessWidget {
-  const CustomAvatar({super.key});
+  const CustomAvatar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const CircleAvatar(
-          radius: 60,
-        ),
-        const SizedBox(height: 10.0),
-        Text(
-          'Chá de manga',
-          style: TextStyle(
-            color: Colors.green[300],
-            fontWeight: FontWeight.w800,
+    return CarouselSlider.builder(
+      itemCount: 4,
+      itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(
+              horizontal: 8.0), // Espaçamento vertical entre os contêineres
+          child: Container(
+            height: 200,
+            width: 300,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.green[300],
+            ),
+            child: const Text('aaaa'),
           ),
-        ),
-      ],
+        );
+      },
+      options: CarouselOptions(
+        autoPlay: true,
+        initialPage: 0,
+      ),
     );
   }
 }
