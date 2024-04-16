@@ -6,7 +6,7 @@ abstract class TeaState with _$TeaState {
 
   factory TeaState.loading() = _TeaStateLoading;
 
-  factory TeaState.data({required List<TeaModel> data}) = _TeaStateData;
+  factory TeaState.data({required List<TeaModel> products}) = _TeaStateData;
 
   factory TeaState.error({required String message}) = _TeaStateError;
 

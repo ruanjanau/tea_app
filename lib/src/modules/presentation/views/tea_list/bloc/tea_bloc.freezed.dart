@@ -169,7 +169,7 @@ mixin _$TeaState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TeaModel> data) data,
+    required TResult Function(List<TeaModel> products) data,
     required TResult Function(String message) error,
     required TResult Function(String message) success,
   }) =>
@@ -178,7 +178,7 @@ mixin _$TeaState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<TeaModel> data)? data,
+    TResult? Function(List<TeaModel> products)? data,
     TResult? Function(String message)? error,
     TResult? Function(String message)? success,
   }) =>
@@ -187,7 +187,7 @@ mixin _$TeaState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TeaModel> data)? data,
+    TResult Function(List<TeaModel> products)? data,
     TResult Function(String message)? error,
     TResult Function(String message)? success,
     required TResult orElse(),
@@ -280,7 +280,7 @@ class _$TeaStateInitialImpl implements _TeaStateInitial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TeaModel> data) data,
+    required TResult Function(List<TeaModel> products) data,
     required TResult Function(String message) error,
     required TResult Function(String message) success,
   }) {
@@ -292,7 +292,7 @@ class _$TeaStateInitialImpl implements _TeaStateInitial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<TeaModel> data)? data,
+    TResult? Function(List<TeaModel> products)? data,
     TResult? Function(String message)? error,
     TResult? Function(String message)? success,
   }) {
@@ -304,7 +304,7 @@ class _$TeaStateInitialImpl implements _TeaStateInitial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TeaModel> data)? data,
+    TResult Function(List<TeaModel> products)? data,
     TResult Function(String message)? error,
     TResult Function(String message)? success,
     required TResult orElse(),
@@ -400,7 +400,7 @@ class _$TeaStateLoadingImpl implements _TeaStateLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TeaModel> data) data,
+    required TResult Function(List<TeaModel> products) data,
     required TResult Function(String message) error,
     required TResult Function(String message) success,
   }) {
@@ -412,7 +412,7 @@ class _$TeaStateLoadingImpl implements _TeaStateLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<TeaModel> data)? data,
+    TResult? Function(List<TeaModel> products)? data,
     TResult? Function(String message)? error,
     TResult? Function(String message)? success,
   }) {
@@ -424,7 +424,7 @@ class _$TeaStateLoadingImpl implements _TeaStateLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TeaModel> data)? data,
+    TResult Function(List<TeaModel> products)? data,
     TResult Function(String message)? error,
     TResult Function(String message)? success,
     required TResult orElse(),
@@ -486,7 +486,7 @@ abstract class _$$TeaStateDataImplCopyWith<$Res> {
           _$TeaStateDataImpl value, $Res Function(_$TeaStateDataImpl) then) =
       __$$TeaStateDataImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<TeaModel> data});
+  $Res call({List<TeaModel> products});
 }
 
 /// @nodoc
@@ -500,12 +500,12 @@ class __$$TeaStateDataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = null,
+    Object? products = null,
   }) {
     return _then(_$TeaStateDataImpl(
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
+      products: null == products
+          ? _value._products
+          : products // ignore: cast_nullable_to_non_nullable
               as List<TeaModel>,
     ));
   }
@@ -514,19 +514,20 @@ class __$$TeaStateDataImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$TeaStateDataImpl implements _TeaStateData {
-  _$TeaStateDataImpl({required final List<TeaModel> data}) : _data = data;
+  _$TeaStateDataImpl({required final List<TeaModel> products})
+      : _products = products;
 
-  final List<TeaModel> _data;
+  final List<TeaModel> _products;
   @override
-  List<TeaModel> get data {
-    if (_data is EqualUnmodifiableListView) return _data;
+  List<TeaModel> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_data);
+    return EqualUnmodifiableListView(_products);
   }
 
   @override
   String toString() {
-    return 'TeaState.data(data: $data)';
+    return 'TeaState.data(products: $products)';
   }
 
   @override
@@ -534,12 +535,12 @@ class _$TeaStateDataImpl implements _TeaStateData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TeaStateDataImpl &&
-            const DeepCollectionEquality().equals(other._data, _data));
+            const DeepCollectionEquality().equals(other._products, _products));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_products));
 
   @JsonKey(ignore: true)
   @override
@@ -552,11 +553,11 @@ class _$TeaStateDataImpl implements _TeaStateData {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TeaModel> data) data,
+    required TResult Function(List<TeaModel> products) data,
     required TResult Function(String message) error,
     required TResult Function(String message) success,
   }) {
-    return data(this.data);
+    return data(products);
   }
 
   @override
@@ -564,11 +565,11 @@ class _$TeaStateDataImpl implements _TeaStateData {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<TeaModel> data)? data,
+    TResult? Function(List<TeaModel> products)? data,
     TResult? Function(String message)? error,
     TResult? Function(String message)? success,
   }) {
-    return data?.call(this.data);
+    return data?.call(products);
   }
 
   @override
@@ -576,13 +577,13 @@ class _$TeaStateDataImpl implements _TeaStateData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TeaModel> data)? data,
+    TResult Function(List<TeaModel> products)? data,
     TResult Function(String message)? error,
     TResult Function(String message)? success,
     required TResult orElse(),
   }) {
     if (data != null) {
-      return data(this.data);
+      return data(products);
     }
     return orElse();
   }
@@ -629,10 +630,10 @@ class _$TeaStateDataImpl implements _TeaStateData {
 }
 
 abstract class _TeaStateData implements TeaState {
-  factory _TeaStateData({required final List<TeaModel> data}) =
+  factory _TeaStateData({required final List<TeaModel> products}) =
       _$TeaStateDataImpl;
 
-  List<TeaModel> get data;
+  List<TeaModel> get products;
   @JsonKey(ignore: true)
   _$$TeaStateDataImplCopyWith<_$TeaStateDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -704,7 +705,7 @@ class _$TeaStateErrorImpl implements _TeaStateError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TeaModel> data) data,
+    required TResult Function(List<TeaModel> products) data,
     required TResult Function(String message) error,
     required TResult Function(String message) success,
   }) {
@@ -716,7 +717,7 @@ class _$TeaStateErrorImpl implements _TeaStateError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<TeaModel> data)? data,
+    TResult? Function(List<TeaModel> products)? data,
     TResult? Function(String message)? error,
     TResult? Function(String message)? success,
   }) {
@@ -728,7 +729,7 @@ class _$TeaStateErrorImpl implements _TeaStateError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TeaModel> data)? data,
+    TResult Function(List<TeaModel> products)? data,
     TResult Function(String message)? error,
     TResult Function(String message)? success,
     required TResult orElse(),
@@ -856,7 +857,7 @@ class _$TeaStateSuccessImpl implements _TeaStateSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TeaModel> data) data,
+    required TResult Function(List<TeaModel> products) data,
     required TResult Function(String message) error,
     required TResult Function(String message) success,
   }) {
@@ -868,7 +869,7 @@ class _$TeaStateSuccessImpl implements _TeaStateSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<TeaModel> data)? data,
+    TResult? Function(List<TeaModel> products)? data,
     TResult? Function(String message)? error,
     TResult? Function(String message)? success,
   }) {
@@ -880,7 +881,7 @@ class _$TeaStateSuccessImpl implements _TeaStateSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TeaModel> data)? data,
+    TResult Function(List<TeaModel> products)? data,
     TResult Function(String message)? error,
     TResult Function(String message)? success,
     required TResult orElse(),
