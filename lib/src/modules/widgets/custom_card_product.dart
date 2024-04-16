@@ -1,4 +1,4 @@
-import 'package:chazen/src/core/icons/core_icons.dart';
+import '../../core/icons/core_icons.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardProduct extends StatelessWidget {

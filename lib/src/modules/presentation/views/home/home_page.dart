@@ -1,5 +1,5 @@
-import 'package:chazen/src/core/icons/core_icons.dart';
-import 'package:chazen/src/modules/widgets/custom_card_product.dart';
+import '../../../../core/icons/core_icons.dart';
+import '../../../widgets/custom_card_product.dart';
 
 import 'components/carousel_component.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +26,7 @@ class HomePage extends StatelessWidget {
           horizontal: 20.0,
           vertical: 10.0,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             Row(
               children: [
@@ -48,7 +47,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 30.0),
-            const CarouselComponent(),
+            CarouselComponent(),
             const SizedBox(height: 40.0),
             Row(
               children: [
