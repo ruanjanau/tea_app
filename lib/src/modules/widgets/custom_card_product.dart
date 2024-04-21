@@ -62,24 +62,29 @@ class CustomCardProduct extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              const SizedBox(height: 6.0),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  const Text(
-                    'Ver Detalhes',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
+              const SizedBox(height: 12.0),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/detalhes');
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    const Text(
+                      'Ver Detalhes',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                  ),
-                  Icon(
-                    CoreIcons.nextArrow,
-                    size: 16,
-                    color: Colors.white,
-                  ),
-                ],
+                    Icon(
+                      CoreIcons.nextArrow,
+                      size: 16,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

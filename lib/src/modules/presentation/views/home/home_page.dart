@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 255, 251, 251),
       appBar: AppBar(
         title: const Text(
           'CháZen',
@@ -106,7 +107,9 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Modular.to.pushNamed('/tea-page');
+                    },
                     child: const Text(
                       'Ver mais',
                       style: TextStyle(
