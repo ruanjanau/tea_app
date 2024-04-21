@@ -5,7 +5,7 @@ class TeaModel {
   final String? name;
   final String? image;
   final List<String>? revenue;
-  final List<String>? preparation;
+  final String? preparation;
   final String? time;
   TeaModel({
     this.id,
@@ -22,7 +22,7 @@ class TeaModel {
       name: map['name'] ?? '',
       image: map['image'] ?? '',
       revenue: List<String>.from(map['revenue']),
-      preparation: List<String>.from(map['preparation']),
+      preparation: map['preparation'] ?? '',
       time: map['time'] ?? '',
     );
   }
@@ -33,7 +33,7 @@ class TeaModel {
       name: name ?? '',
       image: image ?? '',
       revenue: revenue ?? [],
-      preparation: preparation ?? [],
+      preparation: preparation ?? '',
       time: time ?? '',
     );
   }

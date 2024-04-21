@@ -10,7 +10,7 @@ abstract class ITeaDatasource {
 class TeaDatasource implements ITeaDatasource {
   final DioMockApi dioMockApi;
 
-  TeaDatasource({required this.dioMockApi});
+  TeaDatasource(this.dioMockApi);
 
   @override
   FutureOr<List<TeaModel>> getTea() async {

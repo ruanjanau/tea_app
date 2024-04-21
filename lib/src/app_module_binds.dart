@@ -1,3 +1,5 @@
+import 'package:chazen/src/modules/dio/dio_mockapi.dart';
+import 'package:chazen/src/modules/presentation/views/tea_list/tea_list.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'modules/data/datasources/tea_datasource.dart';
@@ -10,12 +12,13 @@ class AppModuleBinds {
         ..._dataSources,
         ..._repository,
         ..._useCases,
+        ..._teaViewModel,
       ];
 
   static List<Bind> get _dataSources => [
         Bind.lazySingleton<ITeaDatasource>(
           (di) => TeaDatasource(
-            dioMockApi: di(),
+            DioMockApi(),
           ),
         )
       ];
@@ -33,5 +36,13 @@ class AppModuleBinds {
             di.get<ITeaRepository>(),
           ),
         )
+      ];
+
+  static List<Bind> get _teaViewModel => [
+        Bind.lazySingleton<TeaViewModel>(
+          (di) => TeaViewModel(
+            di.get<ITeaUsecase>(),
+          ),
+        ),
       ];
 }

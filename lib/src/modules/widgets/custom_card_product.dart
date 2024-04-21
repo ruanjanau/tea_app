@@ -1,15 +1,27 @@
-import '../../core/icons/core_icons.dart';
 import 'package:flutter/material.dart';
 
+import '../../core/icons/core_icons.dart';
+
 class CustomCardProduct extends StatelessWidget {
-  const CustomCardProduct({super.key});
+  final String title;
+  final String time;
+  final String image;
+
+  const CustomCardProduct({
+    Key? key,
+    required this.title,
+    required this.time,
+    required this.image,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 240,
-      width: 160,
-      decoration: BoxDecoration(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 14.0),
+      child: Container(
+        height: 240,
+        width: 170,
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: const Color(0xFF419F7D),
           boxShadow: [
@@ -19,54 +31,58 @@ class CustomCardProduct extends StatelessWidget {
               blurRadius: 3,
               offset: const Offset(0, 3),
             )
-          ]),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 14.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Center(
-              child: CircleAvatar(
-                radius: 54,
-              ),
-            ),
-            const SizedBox(height: 10.0),
-            const Text(
-              'Hortelã',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-            const SizedBox(height: 10.0),
-            const Text(
-              '5 - 8 minutos',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(height: 10.0),
-            Row(
-              children: [
-                const Text(
-                  'Ver Detalhes',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                Icon(
-                  CoreIcons.nextArrow,
-                  size: 16,
-                  color: Colors.white,
-                ),
-              ],
-            ),
           ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 14.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: CircleAvatar(
+                  radius: 54,
+                  backgroundImage: NetworkImage(image),
+                ),
+              ),
+              const SizedBox(height: 10.0),
+              Text(
+                title,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              const SizedBox(height: 6.0),
+              Text(
+                time,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(height: 6.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  const Text(
+                    'Ver Detalhes',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Icon(
+                    CoreIcons.nextArrow,
+                    size: 16,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -3,7 +3,7 @@ class TeaEntity {
   final String name;
   final String image;
   final List<String> revenue;
-  final List<String> preparation;
+  final String preparation;
   final String time;
   TeaEntity({
     required this.id,

@@ -38,7 +38,7 @@ abstract class AppModuleRouting {
         ),
         ChildRoute(
           teaPage.path,
-          child: (context, args) => const TeaListPage(),
+          child: (_, __) => const TeaListPage(),
         ),
       ];
 }
