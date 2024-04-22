@@ -22,7 +22,7 @@ class _CarouselComponentState extends State<CarouselComponent> {
     return Column(
       children: [
         Container(
-          height: 200,
+          height: 240,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -32,7 +32,7 @@ class _CarouselComponentState extends State<CarouselComponent> {
             itemBuilder: (BuildContext context, int index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 5.0,
+                  horizontal: 8.0,
                   vertical: 10.0,
                 ),
                 child: Container(
@@ -74,7 +74,7 @@ class _CarouselComponentState extends State<CarouselComponent> {
               child: Container(
                 width: 10,
                 height: 10,
-                margin: const EdgeInsets.symmetric(horizontal: 2),
+                margin: const EdgeInsets.symmetric(horizontal: 3),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color:

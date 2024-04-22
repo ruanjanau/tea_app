@@ -42,7 +42,7 @@ class SecondOnboarding extends StatelessWidget {
             const SizedBox(height: 40.0),
             ElevatedButton(
               onPressed: () {
-                Modular.to.navigate('/login');
+                Modular.to.navigate('/nav-bar');
               },
               child: const Text('Vamos lá'),
             ),

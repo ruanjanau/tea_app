@@ -1,5 +1,5 @@
-import 'package:chazen/src/modules/dio/dio_mockapi.dart';
-import 'package:chazen/src/modules/presentation/views/tea_list/tea_list.dart';
+import 'modules/dio/dio_mockapi.dart';
+import 'modules/presentation/views/tea_list/tea_list.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'modules/data/datasources/tea_datasource.dart';

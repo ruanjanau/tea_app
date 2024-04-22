@@ -1,4 +1,4 @@
-import 'package:chazen/src/modules/domain/entities/entities.dart';
+import '../../../domain/entities/entities.dart';
 import 'package:equatable/equatable.dart';
 
 class TeaState extends Equatable {

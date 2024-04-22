@@ -1,3 +1,6 @@
+import 'package:chazen/src/modules/presentation/views/favorites/teas_favorites.dart';
+
+import 'core/navigator/navigator.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'modules/presentation/navigation/navigation.dart';
@@ -14,6 +17,8 @@ abstract class AppModuleRouting {
   static BasePath login = BasePath('/login');
   static BasePath home = BasePath('/home');
   static BasePath teaPage = BasePath('/tea-page');
+  static BasePath navBar = BasePath('/nav-bar');
+  static BasePath favorites = BasePath('/favorites');
 
   static List<ModularRoute> get routes => [
         ChildRoute(
@@ -39,6 +44,14 @@ abstract class AppModuleRouting {
         ChildRoute(
           teaPage.path,
           child: (_, __) => const TeaListPage(),
+        ),
+        ChildRoute(
+          navBar.path,
+          child: (_, __) => const NavigatorBar(),
+        ),
+        ChildRoute(
+          favorites.path,
+          child: (_, __) => const TeasFavorites(),
         ),
       ];
 }

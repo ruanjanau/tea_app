@@ -23,6 +23,7 @@ class _TeaListPageState extends State<TeaListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // bottomNavigationBar: NavigatorBar(),
       appBar: AppBar(
         title: const Text('Tea'),
       ),

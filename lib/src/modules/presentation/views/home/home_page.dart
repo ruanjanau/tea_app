@@ -1,6 +1,7 @@
-import 'package:chazen/src/modules/presentation/views/tea_list/tea_list.dart';
+import '../tea_list/tea_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../../../core/icons/core_icons.dart';
 import '../../../widgets/custom_card_product.dart';
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 20.0,
-            vertical: 10.0,
+            vertical: 20.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,7 +67,7 @@ class _HomePageState extends State<HomePage> {
               ),
 
               const CarouselComponent(),
-              const SizedBox(height: 10.0),
+              const SizedBox(height: 20.0),
               Row(
                 children: [
                   Icon(
@@ -87,21 +88,32 @@ class _HomePageState extends State<HomePage> {
               ),
               // const SizedBox(height: 30.0),
               SizedBox(
-                height: 260.0,
-                width: double.infinity,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 6,
-                  itemBuilder: (context, index) {
-                    final teas = viewModel.value.teas[index];
-                    return CustomCardProduct(
-                      title: teas.name,
-                      image: teas.image,
-                      time: teas.time,
-                    );
-                  },
-                ),
-              ),
+                  height: 260.0,
+                  width: double.infinity,
+                  child: AnimatedBuilder(
+                      animation: viewModel,
+                      builder: (context, state) {
+                        if (viewModel.value.isLoading) {
+                          return Center(
+                            child: LoadingAnimationWidget.hexagonDots(
+                              color: Colors.green[400]!,
+                              size: 40,
+                            ),
+                          );
+                        }
+                        return ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: viewModel.value.teas.length,
+                          itemBuilder: (context, index) {
+                            final teas = viewModel.value.teas[index];
+                            return CustomCardProduct(
+                              title: teas.name,
+                              image: teas.image,
+                              time: teas.time,
+                            );
+                          },
+                        );
+                      })),
               const SizedBox(height: 10.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
