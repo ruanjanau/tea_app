@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import '../../modules/presentation/views/favorites/teas_favorites.dart';
-import '../../modules/presentation/views/home/home.dart';
-import '../../modules/presentation/views/tea_list/tea_list_page.dart';
+import '../favorites/teas_favorites.dart';
+import '../home/home.dart';
+import '../tea_list/tea_list_page.dart';
 
 class NavigatorBar extends StatefulWidget {
   const NavigatorBar({super.key});

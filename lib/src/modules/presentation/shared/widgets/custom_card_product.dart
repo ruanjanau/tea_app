@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/icons/core_icons.dart';
+import '../icons/core_icons.dart';
 
 class CustomCardProduct extends StatelessWidget {
   final String title;
