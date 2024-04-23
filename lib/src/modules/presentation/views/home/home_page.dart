@@ -1,10 +1,11 @@
-import '../tea_list/tea_list.dart';
+import 'package:chazen/src/modules/presentation/shared/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-import '../../../../core/icons/core_icons.dart';
-import '../../../widgets/custom_card_product.dart';
+import '../../shared/icons/core_icons.dart';
+import '../../shared/widgets/custom_card_product.dart';
+import '../tea_list/tea_list.dart';
 import 'components/carousel_component.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,17 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 251, 251),
-      appBar: AppBar(
-        title: const Text(
-          'CháZen',
-          style: TextStyle(
-            fontSize: 26.0,
-            color: Colors.white,
-            fontWeight: FontWeight.w900,
-          ),
-        ),
-        backgroundColor: const Color(0xFF419F7D),
-      ),
+      appBar: const CustomAppBar(title: 'CháZen'),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(

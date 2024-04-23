@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/assets/assets.dart';
-import '../../../../core/strings/strings.dart';
+import '../../shared/assets/assets.dart';
+import '../../shared/strings/strings.dart';
 
 class FirstOnboarding extends StatelessWidget {
   const FirstOnboarding({super.key});

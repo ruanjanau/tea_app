@@ -26,16 +26,20 @@ class _NavigatorBarState extends State<NavigatorBar> {
     return Scaffold(
       body: screens[_selectedIndex],
       bottomNavigationBar: Container(
-        color: Colors.green[400]!,
+        color: Colors.green[400],
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: GNav(
             color: Colors.black38,
             backgroundColor: Colors.green[400]!,
             activeColor: Colors.white,
-            tabBackgroundColor: Colors.black38,
-            iconSize: 30,
-            gap: 8,
+            iconSize: 26,
+            textStyle: const TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
+            gap: 6,
             tabs: const [
               GButton(icon: Icons.home, text: 'Home'),
               GButton(icon: Icons.local_florist_outlined, text: 'Chás'),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/strings/strings.dart';
-import '../../../widgets/widgets.dart';
+import '../../shared/strings/strings.dart';
+import '../../shared/widgets/widgets.dart';
 import 'controller/login_cotroller.dart';
 
 class LoginPage extends StatefulWidget {
