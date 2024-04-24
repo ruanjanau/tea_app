@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../shared/strings/strings.dart';
-import '../../shared/widgets/widgets.dart';
+import '../../shared/components/components.dart';
 import 'controller/login_cotroller.dart';
 
 class LoginPage extends StatefulWidget {
@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                 const Padding(
                   padding: EdgeInsets.only(left: 120.0),
                   child: Text(
-                    CoreStrings.forgotPassword,
+                    GlobalStrings.forgotPassword,
                     style: TextStyle(
                       color: Color.fromARGB(255, 59, 58, 58),
                       fontSize: 16.0,
@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                       color: Color.fromARGB(255, 59, 58, 58),
                     ),
                     Text(
-                      CoreStrings.privacyPolici,
+                      GlobalStrings.privacyPolici,
                       style: TextStyle(
                         color: Color.fromARGB(255, 59, 58, 58),
                         fontSize: 16.0,

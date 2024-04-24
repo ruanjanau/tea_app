@@ -1,1 +1,1 @@
-export 'core_assets.dart';
+export 'global_assets.dart';

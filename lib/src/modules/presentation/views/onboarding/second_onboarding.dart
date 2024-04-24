@@ -19,7 +19,7 @@ class SecondOnboarding extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              CoreStrings.titleOnboard2,
+              GlobalStrings.titleOnboard2,
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
@@ -28,11 +28,11 @@ class SecondOnboarding extends StatelessWidget {
             ),
             Center(
               child: SvgPicture.asset(
-                CoreAssets.onbo2,
+                GlobalAssets.onbo2,
               ),
             ),
             const Text(
-              CoreStrings.infoOnboard2,
+              GlobalStrings.infoOnboard2,
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,

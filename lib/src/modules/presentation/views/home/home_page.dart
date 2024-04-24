@@ -1,10 +1,10 @@
-import 'package:chazen/src/modules/presentation/shared/widgets/custom_app_bar.dart';
+import 'package:chazen/src/modules/presentation/shared/components/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-import '../../shared/icons/core_icons.dart';
-import '../../shared/widgets/custom_card_product.dart';
+import '../../shared/icons/global_icons.dart';
+import '../../shared/components/custom_card_product.dart';
 import '../tea_list/tea_list.dart';
 import 'components/carousel_component.dart';
 
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: [
                   Icon(
-                    CoreIcons.star,
+                    GlobalIcons.star,
                     color: Colors.green[400],
                     size: 30,
                   ),
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: [
                   Icon(
-                    CoreIcons.forYou,
+                    GlobalIcons.forYou,
                     color: Colors.green[400],
                     size: 30,
                   ),
@@ -93,8 +93,7 @@ class _HomePageState extends State<HomePage> {
                           );
                         }
                         return ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: viewModel.value.teas.length,
+                          itemCount: 4,
                           itemBuilder: (context, index) {
                             final teas = viewModel.value.teas[index];
                             return CustomCardProduct(
@@ -111,7 +110,9 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Modular.to.pushNamed('/tea-page');
+                      setState(() {
+                        Modular.to.pushNamed('/tea-page');
+                      });
                     },
                     child: const Text(
                       'Ver mais',
