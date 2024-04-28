@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-import '../../shared/icons/global_icons.dart';
 import '../../shared/components/custom_card_product.dart';
+import '../../shared/icons/global_icons.dart';
 import '../tea_list/tea_list.dart';
 import 'components/carousel_component.dart';
 
@@ -56,7 +56,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-
               const CarouselComponent(),
               const SizedBox(height: 20.0),
               Row(
@@ -77,7 +76,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              // const SizedBox(height: 30.0),
               SizedBox(
                   height: 260.0,
                   width: double.infinity,
@@ -100,11 +98,11 @@ class _HomePageState extends State<HomePage> {
                               title: teas.name,
                               image: teas.image,
                               time: teas.time,
+                              isFavorite: teas.isFavorite,
                             );
                           },
                         );
                       })),
-              const SizedBox(height: 10.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [

@@ -61,6 +61,7 @@ class _TeaListPageState extends State<TeaListPage> {
                       title: tea.name,
                       time: tea.time,
                       image: tea.image,
+                      isFavorite: tea.isFavorite,
                     );
                   },
                 );
