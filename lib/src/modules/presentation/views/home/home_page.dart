@@ -5,6 +5,7 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../shared/components/custom_card_product.dart';
 import '../../shared/icons/global_icons.dart';
+import '../navigator/navigator.dart';
 import '../tea_list/tea_list.dart';
 import 'components/carousel_component.dart';
 
@@ -95,6 +96,7 @@ class _HomePageState extends State<HomePage> {
                           itemBuilder: (context, index) {
                             final teas = viewModel.value.teas[index];
                             return CustomCardProduct(
+                              id: teas.id,
                               title: teas.name,
                               image: teas.image,
                               time: teas.time,
@@ -108,9 +110,12 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      setState(() {
-                        Modular.to.pushNamed('/tea-page');
-                      });
+                      Modular.to.push(
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const NavigatorBar(initialIndex: 1),
+                        ),
+                      );
                     },
                     child: const Text(
                       'Ver mais',
@@ -122,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
