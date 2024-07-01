@@ -6,14 +6,22 @@ import '../home/home.dart';
 import '../tea_list/tea_list_page.dart';
 
 class NavigatorBar extends StatefulWidget {
-  const NavigatorBar({super.key});
+  final int initialIndex;
+
+  const NavigatorBar({super.key, this.initialIndex = 0});
 
   @override
   State<NavigatorBar> createState() => _NavigatorBarState();
 }
 
 class _NavigatorBarState extends State<NavigatorBar> {
-  int _selectedIndex = 0;
+  late int _selectedIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.initialIndex;
+  }
 
   final screens = [
     const HomePage(),
