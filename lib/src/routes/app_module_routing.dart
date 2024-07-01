@@ -1,4 +1,5 @@
 import '../modules/presentation/navigation/base_path.dart';
+import '../modules/presentation/views/details/details.dart';
 import '../modules/presentation/views/favorites/favorites.dart';
 import '../modules/presentation/views/home/home.dart';
 import '../modules/presentation/views/login/login.dart';
@@ -17,6 +18,7 @@ abstract class AppModuleRouting {
   static BasePath teaPage = BasePath('/tea-page');
   static BasePath navBar = BasePath('/nav-bar');
   static BasePath favorites = BasePath('/favorites');
+  static BasePath details = BasePath('/details');
 
   static List<ModularRoute> get routes => [
         ChildRoute(
@@ -50,6 +52,10 @@ abstract class AppModuleRouting {
         ChildRoute(
           favorites.path,
           child: (_, __) => const TeasFavorites(),
+        ),
+        ChildRoute(
+          details.path,
+          child: (_, args) => DetailsPage(id: args.data),
         ),
       ];
 }
