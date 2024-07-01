@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../icons/icons.dart';
 
 class CustomCardProduct extends StatelessWidget {
+  final int id;
   final bool isFavorite;
   final String title;
   final String time;
@@ -14,6 +15,7 @@ class CustomCardProduct extends StatelessWidget {
     required this.time,
     required this.image,
     required this.isFavorite,
+    required this.id,
   }) : super(key: key);
 
   @override
@@ -71,7 +73,11 @@ class CustomCardProduct extends StatelessWidget {
                       const SizedBox(height: 6.0),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/detalhes');
+                          Navigator.pushNamed(
+                            context,
+                            '/details',
+                            arguments: id,
+                          );
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
