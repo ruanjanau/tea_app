@@ -58,6 +58,7 @@ class _TeaListPageState extends State<TeaListPage> {
                   itemBuilder: (context, index) {
                     final tea = viewModel.value.teas[index];
                     return CustomCardProduct(
+                      id: tea.id,
                       title: tea.name,
                       time: tea.time,
                       image: tea.image,
