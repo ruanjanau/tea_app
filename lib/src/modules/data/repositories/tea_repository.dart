@@ -19,4 +19,9 @@ class TeaRepository implements ITeaRepository {
       return Left(TeaErrors.server());
     }
   }
+
+  @override
+  Future<void> updateFavoriteStatus(int id, bool isFavorite) async {
+    await _datasource.updateFavoriteStatus(id, isFavorite);
+  }
 }

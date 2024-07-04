@@ -1,5 +1,6 @@
 class TeaEntity {
   final int id;
+
   final String name;
   final bool isFavorite;
   final String image;
@@ -15,4 +16,24 @@ class TeaEntity {
     required this.preparation,
     required this.time,
   });
+
+  TeaEntity copyWith({
+    int? id,
+    String? name,
+    String? image,
+    bool? isFavorite,
+    List<String>? revenue,
+    String? preparation,
+    String? time,
+  }) {
+    return TeaEntity(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      image: image ?? this.image,
+      isFavorite: isFavorite ?? this.isFavorite,
+      revenue: revenue ?? this.revenue,
+      preparation: preparation ?? this.preparation,
+      time: time ?? this.time,
+    );
+  }
 }

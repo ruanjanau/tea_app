@@ -18,12 +18,16 @@ class DioMockApi {
   static InterceptorsWrapper getInterceptor() {
     return InterceptorsWrapper(
       onRequest: (RequestOptions options, RequestInterceptorHandler handler) {
+        print('Request: ${options.method} ${options.path}');
+        print('Request data: ${options.data}');
         return handler.next(options);
       },
       onResponse: (Response response, ResponseInterceptorHandler handler) {
+        print('Response: ${response.statusCode} ${response.data}');
         return handler.next(response);
       },
       onError: (DioException error, ErrorInterceptorHandler handler) {
+        print('Error: $error');
         return handler.next(error);
       },
     );

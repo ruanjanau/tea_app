@@ -6,6 +6,7 @@ import '../repositories/repositories.dart';
 
 abstract class ITeaUsecase {
   Future<Either<TeaErrors, List<TeaEntity>>> call();
+  Future<void> updateFavoriteStatus(int id, bool isFavorite);
 }
 
 class TeaUsecase implements ITeaUsecase {
@@ -15,5 +16,10 @@ class TeaUsecase implements ITeaUsecase {
   @override
   Future<Either<TeaErrors, List<TeaEntity>>> call() {
     return _repository.getTea();
+  }
+
+  @override
+  Future<void> updateFavoriteStatus(int id, bool isFavorite) async {
+    await _repository.updateFavoriteStatus(id, isFavorite);
   }
 }

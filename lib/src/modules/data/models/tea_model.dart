@@ -2,6 +2,7 @@ import '../../domain/entities/entities.dart';
 
 class TeaModel {
   final int? id;
+
   final String? name;
   final bool? isFavorite;
   final String? image;
