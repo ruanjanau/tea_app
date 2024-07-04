@@ -19,4 +19,18 @@ class TeaViewModel extends ValueNotifier<TeaState> {
 
     value = state.copyWith(isLoading: false);
   }
+
+  Future<void> toggleFavorite(int id) async {
+    final updatedTeas = value.teas.map((tea) {
+      if (tea.id == id) {
+        return tea.copyWith(isFavorite: !tea.isFavorite);
+      }
+      return tea;
+    }).toList();
+
+    value = value.copyWith(teas: updatedTeas);
+
+    final tea = value.teas.firstWhere((tea) => tea.id == id);
+    await _teaUsecase.updateFavoriteStatus(tea.id, tea.isFavorite);
+  }
 }

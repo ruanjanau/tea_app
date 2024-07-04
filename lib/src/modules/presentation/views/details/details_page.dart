@@ -1,9 +1,9 @@
-import 'components/custom_revenue.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../shared/icons/icons.dart';
 import '../tea_list/tea_list.dart';
+import 'components/custom_revenue.dart';
 
 class DetailsPage extends StatefulWidget {
   final int id;
@@ -98,6 +98,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   width: 220,
                   height: 220,
                   decoration: BoxDecoration(
+                    color: Colors.white,
                     shape: BoxShape.circle,
                     border: Border.all(
                       color: Colors.grey,
