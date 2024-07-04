@@ -1,3 +1,4 @@
+import 'package:chazen/src/modules/presentation/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
 class TeasFavorites extends StatelessWidget {
@@ -6,8 +7,8 @@ class TeasFavorites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Favoritos'),
+      appBar: const CustomAppBar(
+        title: 'Favoritos',
       ),
       body: Container(),
     );

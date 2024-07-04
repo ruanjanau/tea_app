@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(vertical: 40.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                               content: Text('Preencha todos os campos!'),
                             ),
                           )
-                        : Navigator.pushNamed(context, '/home');
+                        : Navigator.pushNamed(context, '/nav-bar');
                   },
                   color: const Color.fromARGB(255, 59, 58, 58),
                 ),

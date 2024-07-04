@@ -18,7 +18,7 @@ class _TeaSplashState extends State<TeaSplash> {
         const Duration(seconds: 4),
       );
       nav.pushNamed(
-        '/first-onboarding',
+        '/nav-bar',
       );
     });
     super.initState();

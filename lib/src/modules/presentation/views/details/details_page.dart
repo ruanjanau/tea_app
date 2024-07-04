@@ -1,4 +1,4 @@
-import 'package:chazen/src/modules/presentation/views/details/components/custom_revenue.dart';
+import 'components/custom_revenue.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
