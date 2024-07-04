@@ -33,7 +33,7 @@ class TeaDatasource implements ITeaDatasource {
       print('Response body: ${response.data}');
     } on DioException catch (e) {
       print('Failed to update favorite status: $e');
-      rethrow; // Rethrow the exception after logging it
+      rethrow;
     }
   }
 }
